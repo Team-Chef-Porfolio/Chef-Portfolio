@@ -21,6 +21,7 @@ const RegisterChef = () => {
       .post('/auth/register/', chef)
       .then((res) => {
         console.log(res);
+        localStorage.setItem('token', res.data.token);
         setChef(defaultChef);
       })
       .catch((err) => console.log(err));
