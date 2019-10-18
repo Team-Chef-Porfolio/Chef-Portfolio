@@ -1,17 +1,71 @@
-// Body of POST
+import React, { useState } from 'react';
+import { axiosAuthenticate } from '../axiosAuthenticate/axiosAuthenticate';
 
+const RegisterChef = () => {
+  const defaultChef = {
+    username: '',
+    password: '',
+    email: '',
+    location: ''
+  };
 
-// {
-//   "username": "testy",
-//   "password": "mctestface",
-//   "email": "testy@mctestface.com",
-//   "location": "Chicago, IL"
-// }
+  const [chef, setChef] = useState(defaultChef);
 
-// Return from POST
+  const handleChange = (e) => {
+    setChef({ ...chef, [e.target.name]: e.target.value });
+  };
 
-// {
-//   "id": 6,
-//   "username": "testy",
-//   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo2LCJ1c2VybmFtZSI6InRlc3R5IiwiaWF0IjoxNTY2MzEzMzk5LCJleHAiOjE1NjYzOTk3OTl9.AIQFmgV0DyDshbq1VchMqwbHZ72aVmDSWRWTgdFFyYE"
-// }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axiosAuthenticate()
+      .post('/auth/register/', chef)
+      .then((res) => {
+        console.log(res);
+        setChef(defaultChef);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type='text'
+        name='username'
+        value={chef.username}
+        onChange={handleChange}
+        placeholder='Name'
+      />
+
+      <input
+        type='password'
+        name='password'
+        value={chef.password}
+        onChange={handleChange}
+        placeholder='Password'
+      />
+
+      <input
+        type='email'
+        name='email'
+        value={chef.email}
+        onChange={handleChange}
+        placeholder='Email'
+      />
+
+      <input
+        type='text'
+        name='location'
+        value={chef.location}
+        onChange={handleChange}
+        placeholder='City, State'
+      />
+
+      <button type='submit'>Create Profile</button>
+    </form>
+  );
+};
+
+// ROUTE USER TO LOGIN PAGE AFTER CREATING ACCOUNT
+
+export default RegisterChef;
+
