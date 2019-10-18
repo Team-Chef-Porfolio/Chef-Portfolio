@@ -4,7 +4,7 @@ import Login from './components/Login/Login';
 import RegisterChef from './components/RegisterChef/RegisterChef';
 import './App.css';
 import NavBar from "./components/NavBar/NavBar";
-
+import PortfolioList from './components/ChefPortfolio/PortfolioList';
 
 
 function App() {
