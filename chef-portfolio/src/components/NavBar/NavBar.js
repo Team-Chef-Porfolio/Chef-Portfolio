@@ -21,7 +21,7 @@ function NavBar (){
                 <Link to="/" >Account</Link>
             </div>
             <div className="link">
-                <Link to="/" >PortFolio</Link>
+                <Link to="/portfolio/all" >Portfolio</Link>
             </div >
             <div className="link">
                 <Link to="/" >About</Link>
