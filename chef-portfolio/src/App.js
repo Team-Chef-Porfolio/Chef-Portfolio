@@ -5,6 +5,7 @@ import RegisterChef from './components/RegisterChef/RegisterChef';
 import './App.css';
 import NavBar from "./components/NavBar/NavBar";
 import PortfolioList from './components/ChefPortfolio/PortfolioList';
+import RecipeList from './components/ChefPortfolio/RecipeList';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
      <Login/>
 
      <Route exact path = '/portfolio/all' component= {PortfolioList} />
+     <Route exact path = '/portfolio/:id' component= {RecipeList} />
     </div>
   </Router>
   );
