@@ -1,0 +1,26 @@
+
+.grid-view{   
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.chefs{
+    padding: 30px;
+}
+.chefs .chef-photo{
+    width: 500px;
+    height:300px;
+    border-radius: 10px;
+}
+
+.chef-container{
+    max-width: 100%;
+    height: 90%;
+    padding: 140px;
+}
+
+.chef-link{
+    text-decoration:none;
+    color:black;
+}
