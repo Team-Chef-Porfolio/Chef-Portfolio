@@ -24,7 +24,7 @@ export default function PortfolioList() {
     <section className = 'chef-list grid-view'>
     {chef.slice(0,3).map(chef =>( 
         <div className = 'chefs' key={chef.id}>
-            <Link className="chef-link" to={ `/portfolio/${chef.chef_name}/${chef.id}`}>
+            <Link className="chef-link" to={ `/portfolio/${chef.id}`}>
             <img
             className='chef-photo'
             src = {chef.item_photo}
