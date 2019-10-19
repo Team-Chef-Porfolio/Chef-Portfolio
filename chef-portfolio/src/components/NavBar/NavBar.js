@@ -22,7 +22,7 @@ console.log('props from Navbar', props);
                 <Link to="/account" >Account</Link>
             </div>
             <div className="link">
-                <Link to="/portfolio" >PortFolio</Link>
+                <Link to="/portfolio" >Portfolio</Link>
             </div >
             <div className="link">
                 <Link to="/about" >About</Link>
