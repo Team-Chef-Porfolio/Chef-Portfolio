@@ -1,11 +1,14 @@
 import { axiosAuthenticate } from '../axiosAuthenticate/axiosAuthenticate';
 import React, { useState } from 'react';
 
-const Login = (props) => {
-  const [credentials, setCredentials] = useState({
+const Login = () => {
+ 
+  const defaultCredentials = {
     username: '',
     password: ''
-  });
+  };
+
+  const [credentials, setCredentials] = useState(defaultCredentials);
 
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -14,11 +17,11 @@ const Login = (props) => {
   const login = (e) => {
     e.preventDefault();
     axiosAuthenticate()
-      .post('/login', credentials)
+      .post('/auth/login', credentials)
       .then((res) => {
         console.log(res);
         localStorage.setItem('token', res.token);
-        props.history.push('/auth/login/');
+        setCredentials(defaultCredentials);
       })
       .catch((err) => console.log(err));
   };
