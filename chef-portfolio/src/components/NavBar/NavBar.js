@@ -7,8 +7,9 @@ import './NavBar.css';
 
 
 
-function NavBar (){
-    
+function NavBar (props){
+console.log('props from Navbar', props);
+ 
     
     return (
         <div className="Navbar-bar">
@@ -18,16 +19,16 @@ function NavBar (){
         <div className="NavBar">
             
             <div className="link">
-                <Link to="/" >Account</Link>
+                <Link to="/account" >Account</Link>
             </div>
             <div className="link">
-                <Link to="/portfolio/all" >Portfolio</Link>
+                <Link to="/portfolio" >PortFolio</Link>
             </div >
             <div className="link">
-                <Link to="/" >About</Link>
+                <Link to="/about" >About</Link>
             </div>
             <div className="link">
-                <Link to="/" >Support</Link>
+                <Link to="/support" >Support</Link>
             </div>
             
         </div>
