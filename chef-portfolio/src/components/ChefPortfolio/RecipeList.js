@@ -17,17 +17,19 @@ const RecipeList = (props) => {
           })
     },[props.match.params.id]);
     
-    const { chef_name, item_photo } = recipe;
+    // const { chef_name, item_photo } = recipe;
     return(
         <div className = 'chef_list'>
-            <div className = 'chefs'>
-                <img 
+            {/* <div className = 'chefs'>
+                {/* <img 
                 src= {item_photo}
                 alt={chef_name}
                 />
-                <button>{chef_name}</button>
-            </div>
+                <button>{chef_name}</button> */}
+{/* 
+            </div>} */}
         </div>
+       
     )
 }
 
