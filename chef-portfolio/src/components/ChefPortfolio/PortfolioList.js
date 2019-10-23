@@ -22,7 +22,7 @@ export default function PortfolioList() {
     <div className='chef-container'>
         <h1>Portfolios</h1>
     <section className = 'chef-list grid-view'>
-    {chef.slice(0,3).map(chef =>( 
+    {chef.map(chef =>( 
         <div className = 'chefs' key={chef.id}>
             <Link className="chef-link" to={ `/portfolio/${chef.id}`}>
             <img
