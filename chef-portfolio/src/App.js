@@ -19,8 +19,9 @@ function App() {
     <Router>
       <div className='App'>
         <NavBar />
-
+        <RecipeList/>
         <Switch>
+         
           <PrivateRoute exact path='/Portfolio' component={Portfolio} />
           <PrivateRoute path='/account' component={Account} />
           <PrivateRoute path='/about' component={About} />
