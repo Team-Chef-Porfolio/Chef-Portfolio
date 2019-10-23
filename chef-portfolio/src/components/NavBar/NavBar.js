@@ -9,7 +9,7 @@ function NavBar(props) {
   return (
     <div className='Navbar-bar'>
       <div className='logo'>
-        <h1>Logo</h1>
+        <h1>STASH</h1>
       </div>
       <div className='NavBar'>
         <div className='link'>
@@ -30,6 +30,9 @@ function NavBar(props) {
         <div className='link'>
           <Link to='/support'>Support</Link>
         </div>
+      </div>
+      <div className= 'icons'>
+          <img src='.../icons/Search.png' alt='icon' />
       </div>
     </div>
   );
