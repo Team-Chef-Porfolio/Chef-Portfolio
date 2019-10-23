@@ -2,7 +2,6 @@ import { axiosAuthenticate } from '../axiosAuthenticate/axiosAuthenticate';
 import React, { useState } from 'react';
 
 const Login = () => {
- 
   const defaultCredentials = {
     username: '',
     password: ''
@@ -20,7 +19,7 @@ const Login = () => {
       .post('auth/login', credentials)
       .then((res) => {
         console.log(res);
-        localStorage.setItem('token', res.token);
+        localStorage.setItem('token', res.data.token);
         setCredentials(defaultCredentials);
       })
       .catch((err) => console.log(err));
