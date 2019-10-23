@@ -1,0 +1,56 @@
+.support{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.supportContainer{
+    border: 1px solid #fa9600;
+    height: 600px;
+    max-width:40%;
+    padding:20px;
+    border-radius: 10%;
+}
+.title{
+    text-align: center;
+    color: #fa9600;
+    
+}
+p{
+    font-size:1.0rem;
+   padding-top:10px;
+   text-align: start;
+   height:10px;
+   font-weight: 600;
+}
+.nameField{
+    height:30px;
+    width: 400px;
+    font-size: 1.0rem;
+}
+.supportDropdown{
+    font-size: 1.4rem;
+    height: 60px;
+    width: 400px;
+}
+.lastField{
+    height:200px;
+    width:400px;
+    font-size: 1.0rem;
+}
+label{
+    height:40px;
+}
+button{
+    width: 200px;
+    height: 49px;
+    border-radius: 8px;
+    background-color: #fa9600 ;
+    border: none;
+    color: white;
+    font-weight:600;
+    letter-spacing: 0.67px;
+    
+}
+
+
+
