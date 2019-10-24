@@ -8,6 +8,7 @@ import Support from './components/support/Support';
 import Account from './components/account/Account';
 import Portfolio from './components/portfolio/Portfolio';
 import About from './components/about/About';
+import Footer from './components/footer/Footer';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import PortfolioList from './components/ChefPortfolio/PortfolioList';
@@ -18,8 +19,9 @@ function App() {
     <Router>
       <div className='App'>
         <NavBar />
-        <RegisterChef />
+        <RecipeList/>
         <Switch>
+         
           <PrivateRoute exact path='/Portfolio' component={Portfolio} />
           <PrivateRoute path='/account' component={Account} />
           <PrivateRoute path='/about' component={About} />
