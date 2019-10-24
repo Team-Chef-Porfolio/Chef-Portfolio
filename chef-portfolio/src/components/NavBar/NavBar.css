@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
     height: 12vh; 
-    border: 1px solid red;
     
 }
 
@@ -14,14 +13,15 @@
     margin: 0 255px;
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
-    border: 1px solid black;
+
    
 }
 .logo{
     width: 100%;
     font-size: 17px;
-    padding:0 0 0 20px;
+    padding:0 0 0 30px;
     color: rgb(74, 74, 74);
+
 }
 
 
@@ -31,6 +31,7 @@
     text-decoration: none;
     margin: 0 30px ;
     font-size: 1.1rem;
+    padding: 0 0 0 20px;
 }
 
 .link{

@@ -30,9 +30,9 @@ function NavBar(props) {
         <div className='link'>
           <Link to='/support'>Support</Link>
         </div>
-      </div>
-      <div className= 'icons'>
-          <img src='.../icons/Search.png' alt='icon' />
+        <img src='https://image.flaticon.com/icons/svg/61/61088.svg' style={{width:'25px',height: '24px',padding:'40px 4px 4px 4px'}}alt='icon' />
+        <img style={{width:'25px', padding:'28px 4px 4px 20px',}} src='https://image.flaticon.com/icons/svg/44/44948.svg' alt='icon' />
+
       </div>
     </div>
   );
