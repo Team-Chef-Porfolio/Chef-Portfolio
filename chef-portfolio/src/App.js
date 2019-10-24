@@ -18,13 +18,13 @@ function App() {
     <Router>
       <div className='App'>
         <NavBar />
-
+        <RegisterChef />
         <Switch>
           <PrivateRoute exact path='/Portfolio' component={Portfolio} />
           <PrivateRoute path='/account' component={Account} />
           <PrivateRoute path='/about' component={About} />
           <PrivateRoute path='/addrecipe' component={AddRecipe} />
-          <Route exact path='/' component={PortfolioList} />
+          {/* <Route exact path='/' component={PortfolioList} /> */}
           <Route path='/login' component={Login} />
           <Route path='/support' component={Support} />
           <Route path='/registerchef' component={RegisterChef} />
