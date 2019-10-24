@@ -1,5 +1,18 @@
 import React, { useState } from 'react';
 import { axiosAuthenticate } from '../axiosAuthenticate/axiosAuthenticate';
+import styled from "styled-components";
+
+const RecipeContainer = styled.div`
+
+border: blue solid 3px;
+width: 800px;
+height: 100vh;
+margin: 0 auto;
+
+`
+
+
+
 
 const AddRecipe = () => {
   const defaultRecipe = {
@@ -29,14 +42,9 @@ const AddRecipe = () => {
   };
 
   return (
+    <RecipeContainer>
     <form onSubmit={handleSubmit}>
-      <input
-        type='text'
-        name='id'
-        value={recipe.id}
-        onChange={handleChange}
-        placeholder='ID'
-      />
+      
 
       <input
         type='text'
@@ -78,9 +86,21 @@ const AddRecipe = () => {
         placeholder='User ID'
       />
 
+
+
       <button type='submit'>Add Recipe</button>
     </form>
+    </RecipeContainer>
   );
 };
 
 export default AddRecipe;
+
+
+{/* <input
+        type='text'
+        name='id'
+        value={recipe.id}
+        onChange={handleChange}
+        placeholder='ID'
+      /> */}
