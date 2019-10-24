@@ -1,9 +1,8 @@
 .Navbar-bar{
     display: flex;
     flex-direction: row;
-    background-color: #CFF99D; 
-    height: 100px; 
-    border: 1px solid red;
+    height: 12vh; 
+    
 }
 
 .NavBar{
@@ -14,28 +13,25 @@
     margin: 0 255px;
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
-    background-color: #CFF99D;
-    border: 1px solid black;
+
    
 }
 .logo{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    border: 1px solid black;
+    font-size: 17px;
+    padding:0 0 0 30px;
+    color: rgb(74, 74, 74);
 
 }
 
 
 
 .NavBar a{
-    
- text-decoration: none;
- margin: 0 30px ;
- font-size: 1.5rem;
+    color: rgb(74, 74, 74);   
+    text-decoration: none;
+    margin: 0 30px ;
+    font-size: 1.1rem;
+    padding: 0 0 0 20px;
 }
 
 .link{
