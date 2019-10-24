@@ -2,27 +2,54 @@ import React, { useState } from 'react';
 import { axiosAuthenticate } from '../axiosAuthenticate/axiosAuthenticate';
 import styled from 'styled-components';
 
-const RegButton = styled.button`
-
-background-color: #FA9600;
-font-size: 1.5rem;
-
-
-`
-
 const RegDiv = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 30px auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto 0;
   width: 275px;
-
+  h1 {
+    margin-top: 45px;
+    font-weight: 900;
+    font-size: 2.4rem;
+    width: 600px;
+    letter-spacing: .4rem;
+    color: #fa9600;
+  }
   form {
     display: flex;
     flex-direction: column;
-    input {
-      margin-bottom: 10px;
-      background-color: #CFF99D;
+
+    li {
+      list-style-type: none;
+      p {
+        height: 5;
+        font-size: 1.4rem;
+        color: #636363;
+        font-weight: 300;
+        padding: 0;
+        margin: 0 0 25px 0;
+      }
+      input {
+        margin-bottom: 30px;
+        background-color: none;
+        height: 65px;
+        max-width: 740px;
+        width: 100%;
+        border: solid 1px #636363;
+        border-radius: 10px;
+      }
+    }
+    button {
+      background-color: #fa9600;
+      width: 270px;
+      height: 70px;
+      align-self: flex-end;
+      margin-top: 0;
+      font-size: 1.8rem;
+      letter-spacing: 0.3rem;
+      font-weight: 300;
     }
   }
 `;
@@ -58,47 +85,59 @@ const RegisterChef = () => {
   };
 
   return (
+    <>
+    
     <RegDiv>
+    <h1>Create an Account</h1>
       <form autoComplete='new-password' onSubmit={handleSubmit}>
-        <input
-          type='text'
-          name='username'
-          value={chef.username}
-          onChange={handleChange}
-          placeholder='Name'
-          className='inputField'
-        />
+        <li>
+          <p>Name</p>
+          <input
+            type='text'
+            name='username'
+            value={chef.username}
+            onChange={handleChange}
+            className='inputField'
+          />
+        </li>
 
-        <input
-          type='password'
-          name='password'
-          value={chef.password}
-          onChange={handleChange}
-          placeholder='Password'
-          className='inputField'
-        />
+        <li>
+          <p>Email</p>
+          <input
+            type='email'
+            name='email'
+            value={chef.email}
+            onChange={handleChange}
+            className='inputField'
+          />
+        </li>
 
-        <input
-          type='email'
-          name='email'
-          value={chef.email}
-          onChange={handleChange}
-          placeholder='Email'
-          className='inputField'
-        />
+        <li>
+          <p>Password</p>
+          <input
+            type='password'
+            name='password'
+            value={chef.password}
+            onChange={handleChange}
+            className='inputField'
+          />
+        </li>
 
-        <input
-          type='text'
-          name='location'
-          value={chef.location}
-          onChange={handleChange}
-          placeholder='City, State'
-          className='inputField'
-        />
+        <li>
+          <p>Location</p>
+          <input
+            type='text'
+            name='location'
+            value={chef.location}
+            onChange={handleChange}
+            className='inputField'
+          />
+        </li>
 
-        <RegButton type='submit'>Create Profile</RegButton>
+        <button type='submit'>Join Now</button>
       </form>
     </RegDiv>
+    </>
   );
 };
 
