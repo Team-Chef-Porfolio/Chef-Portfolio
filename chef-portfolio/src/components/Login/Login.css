@@ -1,0 +1,30 @@
+.FormContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.Form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+}
+
+input{
+    width: 400px;
+    height: 30px;
+    margin-bottom: 17px;
+}
+label{
+    font-size: 1.0rem;
+    padding-top: 10px;
+    text-align: start;
+    height: 10px;
+    font-weight: 100;
+    color:#7D7D7D;
+}
+button{
+    
+    margin-left: 210px;
+}
+

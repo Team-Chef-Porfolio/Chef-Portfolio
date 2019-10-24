@@ -1,5 +1,6 @@
 import { axiosAuthenticate } from '../axiosAuthenticate/axiosAuthenticate';
 import React, { useState } from 'react';
+import './Login.css';
 
 const Login = () => {
   const defaultCredentials = {
@@ -26,8 +27,8 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={login}>
+    <div className="FormContainer">
+      <form className="Form" onSubmit={login}>
       <label htmlFor="UserName">Username</label>
         <input
           type='text'
@@ -42,8 +43,9 @@ const Login = () => {
           value={credentials.password}
           onChange={handleChange}
         />
-        <button type='submit'>Log In</button>
+        <button type='submit'>Sign In</button>
       </form>
+      
     </div>
   );
 };
