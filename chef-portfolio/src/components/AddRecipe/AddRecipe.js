@@ -9,10 +9,12 @@ const RecipeContainer = styled.div`
   margin: 0 auto;
 `;
 
+const localChef = localStorage.getItem('username');
+
 const AddRecipe = () => {
   const defaultRecipe = {
     id: '',
-    chef_name: '',
+    chef_name: localChef,
     recipe_title: '',
     item_photo: '',
     chef_location: '',
@@ -55,14 +57,15 @@ const defaultLocalRecipe = {
 
   return (
     <RecipeContainer>
+      <h1>{localChef}</h1>
       <form onSubmit={handleSubmit}>
-        <input
+        {/* <input
           type='text'
           name='chef_name'
           value={recipe.chef_name}
           onChange={handleChange}
           placeholder="Chef's Name"
-        />
+        /> */}
 
         <input
           type='text'

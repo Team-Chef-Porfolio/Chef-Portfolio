@@ -76,9 +76,8 @@ const RegisterChef = () => {
         console.log(res);
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('id', res.data.id);
-
-        // SETS ID IN LOCAL STORAGE FOR REFERENCE TO ALLOW TESTING OTHER COMPONENTS. NOT INTENDED TO BE PRODUCTION SOLUTION
-
+        localStorage.setItem('username', res.data.username);
+        
         setChef(defaultChef);
       })
       .catch((err) => console.log(err));
