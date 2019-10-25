@@ -20,12 +20,13 @@ const Login = () => {
       .post('auth/login', credentials)
       .then((res) => {
         console.log(res);
+        localStorage.setItem('username', res.data.message.substring(0,(res.data.message.length - 14)));
         localStorage.setItem('token', res.data.token);
         setCredentials(defaultCredentials);
       })
       .catch((err) => console.log(err));
   };
-
+ 
   return (
     <div className="FormContainer">
       <form className="Form" onSubmit={login}>
