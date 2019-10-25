@@ -31,7 +31,7 @@ export default function PortfolioList() {
             alt = {chef.chef_name}
             />
 
-            <h2>{chef.chef_name}'s Recipes</h2> </Link>
+            <h2>{chef.chef_name}'s {chef.recipe_title}</h2> </Link>
         </div>
         ))}
     

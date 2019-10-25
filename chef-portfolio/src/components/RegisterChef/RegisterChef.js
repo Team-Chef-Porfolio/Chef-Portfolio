@@ -39,6 +39,8 @@ const RegDiv = styled.div`
         width: 100%;
         border: solid 1px #636363;
         border-radius: 10px;
+        font-size: 1.9rem;
+        padding: 0 20px;
       }
     }
     button {
