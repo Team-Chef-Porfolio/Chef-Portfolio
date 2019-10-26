@@ -8,9 +8,9 @@ function NavBar(props) {
 
   return (
     <div className='Navbar-bar'>
-      
+        <a href='https://eager-goldberg-6042bb.netlify.com/'>
         <h1 className='logo'>STASH</h1>
-      
+      </a>
       <div className='NavBar'>
         <div className='link'>
           <Link to='/login'>Login</Link>
@@ -22,7 +22,7 @@ function NavBar(props) {
           <Link to='/portfolio'>Portfolio</Link>
         </div>
         <div className='link'>
-          <Link to='/about'>About</Link>
+          <a href='https://eager-goldberg-6042bb.netlify.com/secondpage.html'>About</a>
         </div>
         <div className='link'>
           <Link to='/registerchef'>Register</Link>
@@ -30,7 +30,9 @@ function NavBar(props) {
         <div className='link'>
           <Link to='/support'>Support</Link>
         </div>
-        <img src='https://image.flaticon.com/icons/svg/61/61088.svg' id="srch-icon" alt='icon' />
+        <Link to='/'>
+          <img src='https://image.flaticon.com/icons/svg/61/61088.svg' id="srch-icon" alt='icon' />
+        </Link>
         <img className="icon-img" src='https://image.flaticon.com/icons/svg/44/44948.svg' id="head-icon" alt='icon' />
 
       </div>
