@@ -10,7 +10,7 @@ const RecipeList = (props) => {
         
         // const id = props.match.params.id
         axiosAuthenticate()
-          .get(`https://chef-portfolio-buildweeks-be.herokuapp.com/api/posts/7`)
+          .get(`https://chef-portfolio-buildweeks-be.herokuapp.com/api/posts/`)
           .then(response => {
               setRecipe(response.data);
              console.log(response.data)

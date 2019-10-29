@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { axiosAuthenticate } from '../axiosAuthenticate/axiosAuthenticate';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const ChefHeader = styled.h1`
   margin: 30px auto 0;
@@ -67,16 +68,17 @@ const Column2 = styled.div`
 `;
 
 const localChef = localStorage.getItem('username');
+const localId = localStorage.getItem('id')
 
 const AddRecipe = () => {
   const defaultRecipe = {
-    id: '',
+    id: localId,
     chef_name: localChef,
     recipe_title: '',
     item_photo: '',
     chef_location: '',
     item_ingredients: '',
-    user_id: ''
+    user_id: localId
   };
 
   const defaultLocalRecipe = {
@@ -96,13 +98,16 @@ const AddRecipe = () => {
     setRecipe({ ...recipe, [e.target.name]: e.target.value });
   };
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    
     axiosAuthenticate()
+    
       .post('/posts/', recipe)
       .then((res) => {
-        console.log(res);
+        
         setRecipe(defaultRecipe);
         localStorage.setItem('instructions', localRecipe.recipe_instructions);
         localStorage.setItem('cuisine', localRecipe.cuisine);
