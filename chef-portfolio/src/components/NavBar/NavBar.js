@@ -8,6 +8,10 @@ function NavBar(props) {
 
   return (
     <div className='Navbar-bar'>
+
+      
+     
+    
         <a href='https://eager-goldberg-6042bb.netlify.com/'>
         <h1 className='logo'>STASH</h1>
       </a>
@@ -22,7 +26,14 @@ function NavBar(props) {
           <Link to='/portfolio'>Portfolio</Link>
         </div>
         <div className='link'>
+
+          <Link to='/addrecipe'>Add Recipe</Link>
+        </div>
+        <div className='link'>
+          <Link to='/about'>About</Link>
+
           <a href='https://eager-goldberg-6042bb.netlify.com/secondpage.html'>About</a>
+
         </div>
         <div className='link'>
           <Link to='/registerchef'>Register</Link>
